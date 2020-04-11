@@ -1,0 +1,474 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&display=swap');
+*
+{
+    margin: 0px;
+    font-family: 'PT Sans', sans-serif;
+}
+p
+{
+    line-height: 120%;
+}
+.bold
+{
+    font-weight: bold;
+}
+.largeFont
+{
+    font-size: 130%;
+}
+.boxLabel
+{
+    line-height: 50px;
+}
+.pointer
+{
+    cursor: pointer;
+}
+
+#screenList
+{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(10, 11, 12, 0.7);
+    z-index: 100;
+}
+
+#boxList
+{
+    position: fixed;
+    top: 25vh;
+    left: 30vh;
+    width: 70vw;
+    height: 30vh;
+    background-color: rgb(219, 219, 219);
+    border-radius: 5px;
+}
+.screenButton
+{
+    float:left;
+    margin-top: 15vh ;
+    margin-left:2.5%;
+    width: 30%;
+    height: 4vw;
+    color: rgb(238, 238, 238);
+    background-color: rgb(19, 19, 19);
+    border-radius: 5px;
+    text-align: center;
+    line-height:4vw ;
+    cursor: pointer;
+    transition-duration: 0.2s;
+}
+.screenButton:hover
+{
+    color: rgb(19, 19, 19) ;
+    background-color:rgb(153, 153, 153);
+    transition-duration: 0.1s;
+
+}
+
+#header
+{
+    width: 100%;
+    height: 100px;
+    background-color: rgb(116, 116, 116);
+}
+#logo
+{
+    position: absolute;
+    float: left;
+    top: 25px;
+    left: 40px;
+    width: 200px;
+    height: 50px;
+    background-image: url(../img/madlogo.png);
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+}
+
+.screen
+{
+    width: 100%;
+    padding:40px;
+    min-height: 50vw;
+}
+.heading
+{
+    position: relative;
+    font-weight: bold;
+    font-size: 130%;
+    width: calc(100% - 80px);
+    height: 40px;
+    margin-top: 40px;
+    padding: 0px 10px;
+    background-color: #d1dbe1;
+    margin-bottom: 40px;
+
+    line-height: 40px;
+    border-bottom: 4px solid red;
+}
+.heading.top
+{
+    margin-top: 0px;
+    font-size: 220%;
+
+}
+#search
+{
+    position: relative;
+    top: 25px;
+    width: 30vw;
+    height: 50px;
+    margin: 0 35vw;
+}
+#searchBar
+{
+    width: 100%;
+    height: 100%;
+    padding: 10px 20px;
+    border-radius: 50px;
+    border: 0px;
+    box-sizing: border-box;
+}
+#searchList
+{
+    position: absolute;
+    top: 53px;
+    margin-left: 20px;
+    width: calc(50vw - 40px);
+    min-height: 20px;
+    background-color: aliceblue;
+    z-index: 100;
+}
+.search_container
+{
+    height: 50px;
+    cursor: pointer;
+}
+.search_container:hover
+{
+    height: 50px;
+    background-color: #d1dbe1;
+}
+
+.search_container .left img
+{
+    height: calc(100% - 10px);
+    object-fit: fill;
+    border-radius: 5px;
+    margin: 0px 5px;
+}
+.search_container .left
+{
+    float: left;
+    height: 50px;
+    width: 50px;
+    display: inline-block;
+}
+.search_container .right
+{
+    display: inline-block;
+    margin-left: 20px;
+    float: left;
+    height: 100%;
+    line-height:50px ;
+}
+#moviesList
+{
+    width: 100%;
+    display: inline-block;
+}
+.movie
+{
+    float: left;
+    margin-right: 40px;
+    margin-bottom: 10px;
+    width: calc(25vw - 50px);
+    height: auto;
+    cursor: pointer;
+}
+.movie:nth-child(4),
+.movie:nth-child(8)
+{
+    margin-right: 0px;
+}
+.movieLabel
+{
+    text-align: center;
+    height: 40px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.movieImg
+{
+    position: relative;
+    width: calc(25vw - 60px);
+    margin:5px;
+    height: calc((25vw - 50px)*1.5 - 10px);
+    box-shadow: 0px 0px 10px 4px rgba(0,0,0,0.4);
+    display: inline-block;
+    background-size: 100%;
+
+    border-radius: 10px;
+    transition-duration: 0.1s;
+}
+.movieImg:hover
+{
+    width: calc(25vw - 50px);
+    margin:0px;
+    height: calc((25vw - 50px)*1.5);
+    transition-duration: 0.2s;
+    box-shadow: 0px 5px 14px 4px rgba(0,0,0,0.3);
+}
+
+
+#movieWrap
+{
+    width: calc(100vw - 80px);
+    height: auto;
+    padding: 40px 150px;
+    background-color: #d1dbe1;
+    border-radius: 5px;
+    box-sizing: border-box;
+    display: inline-block;
+}
+
+#movieDesc
+{
+    float: left;
+    width: calc(50% - 20px);
+    margin-right: 40px;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #d1dbe1;
+    box-sizing: border-box;
+    font-size: 120%;
+}
+#movieMainImg
+{
+    width: calc(30% - 20px);
+    padding: 20% 0px;
+    background-color: rgb(61, 61, 61);
+    background-image: url(temp_img/inception.jpg);
+    background-size:100% ;
+    display: inline-block;
+}
+
+#ratingCircle
+{
+    position: absolute;
+    bottom: 5px;
+    right: 85px;
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    line-height: 50px;
+    border-radius: 25px;;
+}
+
+#starring
+{
+    
+    width: calc(100% - 80px);
+    display: inline-block;
+}
+.starsImg{
+    background-size: 100%;
+}
+.starsImg:nth-of-type(1n)
+{
+    background-image: url(temp_img/tom.jpg);
+}
+#screenshot
+{
+    width: calc(100% - 80px);
+    display: inline-block;
+}
+.screenshotImg:nth-of-type(1n)
+{
+    background-size: 100%;
+    background-image: url(temp_img/tom-hardy.jpg);
+}
+#relatedMovie
+{
+    
+    width: calc(100% - 80px);
+    display: inline-block;
+}
+.relatedMovie
+{
+    background-size: 100%;
+    background-image: url(temp_img/tenet.jpg);
+
+}
+
+.stars
+{
+    float: left;
+    width: 20vw;
+    height: calc(30vw + 50px);
+    margin-right: 2.5vw;
+}
+.starsImg
+{
+    width: 20vw;
+    height: 30vw;
+    margin-right: 2.5vw;
+    background-color: rgb(73, 73, 73);
+}
+.screenshot
+{
+    float: left;
+    width: 20vw;
+    height: calc(10vw + 50px);
+    margin-right: 2.5vw;
+}
+.screenshotImg
+{
+    float: left;
+    width: 20vw;
+    height: 10vw;
+    margin-right: 2.5vw;
+    background-color: rgb(73, 73, 73);
+}
+.relatedMovie
+{
+    float: left;
+    width: 20vw;
+    height: 30vw;
+    margin-right: 2.5vw;
+}
+
+
+
+
+
+/* people */
+#peopleWrap
+{
+    width: calc(100vw - 80px);
+    height: auto;
+    padding: 40px;
+    background-color: #d1dbe1;
+    box-sizing: border-box;
+    display: inline-block;
+}
+#peopleBio
+{
+
+    margin-bottom: 20px;
+}
+#peopleDesc
+{
+    width: calc(50% - 20px);
+    margin-right: 40px;
+    padding: 20px;
+    background-color: #d1dbe1;
+
+    display: inline-block;
+    box-sizing: border-box;
+
+}
+.descElem
+{
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+span.data{
+    font-weight: normal;
+}
+#peopleImg
+{
+    float: right;
+    width: calc(30% - 20px);
+    padding: 30% 0px;
+    background-color: rgb(61, 61, 61);
+    background-size: 100%;
+    background-image: url(temp_img/cillian.jpg);
+}
+.relatedMovieImg
+{
+    float: left;
+    width: 20vw;
+    height: 30vw;
+    margin-right: 2.5vw;
+    background-color: rgb(73, 73, 73);
+    background-size:100% ;
+    background-image: url(temp_img/madmax.jpg);
+}
+
+
+
+
+
+
+#footer
+{
+    position: relative;
+    width: 100%;
+    height: 100px;
+    background-color: rgb(100, 100, 100);
+
+}
+.footerLogo
+{
+    position: relative;
+    top: 25px;
+    left: 40px;
+    width: 300px;
+    height: 50px;
+    
+
+}
+.footerLogo p
+{
+    float: left;
+    margin-left: 10px;
+    line-height: 50px;
+    color: white;
+
+}
+#logoImg
+{
+    float: left;
+    width: 100px;
+    background-image: url(../img/madlogo.png);
+    background-size:  100%;
+    background-repeat: no-repeat;
+    background-position-y: center;
+}
+#footerName
+{
+    text-align: center;
+    color: white;
+}
+.footerSocial
+{
+    position: absolute;
+    top: 25px;
+    right:25px;
+    float: right;
+}
+.social
+{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    background-color:white ;
+    background-size: 100%;
+}
+.social.fb
+{
+    background-image: url("https://cdn3.iconfinder.com/data/icons/capsocial-round/500/facebook-512.png");
+}
+.social.twitter
+{
+    background-image: url("https://icon-library.net/images/twitter-icon-images/twitter-icon-images-12.jpg");
+}
+.social.insta
+{
+    background-image: url("https://www.pngkey.com/png/full/283-2831746_insta-icon-instagram.png");
+}

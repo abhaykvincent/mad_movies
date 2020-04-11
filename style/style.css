@@ -1,0 +1,35 @@
+body{
+    background-color: black;
+}
+#thump
+{
+    float: left;
+    width: 50%;
+    height: 400px;
+    background-image: url(./background.jpg);
+    background-size: 100%;
+}
+#menu
+{
+    float: right;
+    width: 50%;
+    height: 400px;
+    padding-top: 100px;
+    box-sizing: border-box;
+}
+#menu a{
+    text-align: center;
+    text-decoration: none;
+    width: 200px;
+    display: block;
+    color: rgb(24, 24, 24);
+    font-size: 25px;
+    padding: 10px;
+    margin: 10px 150px;
+    border-radius: 5px;;
+    background-color: rgb(214, 214, 214);
+}
+#menu,#thump
+{
+    margin-top: calc(50vh - 200px)
+}
